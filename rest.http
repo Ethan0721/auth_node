@@ -1,0 +1,31 @@
+GET http://localhost:3000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDcwNTQ3NDYsImV4cCI6MTYwNzA1NDc2MSwiYXVkIjoiNWZjOTQ1YTBmZDE3MmMzZjZkZTkzZWFhIiwiaXNzIjoiZXRoYW4ifQ._w_pgSfA_7oLG4oAvlHjpU3XyXd_JNUyBYQk5Yh2TQ0
+####
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDcwMjY0MDYsImV4cCI6MTYwNzAyNjQyMSwiYXVkIjoiNWZjOTQ2ZTZmZDE3MmMzZjZkZTkzZWFiIiwiaXNzIjoiZXRoYW4ifQ.R-WvFRWMQ_6YS4wyclMS6yUsxYWrEzLmmXKSyhYBfjY
+
+{
+    "email":"ethan072158@gmail.com",
+    "password": "Ethan@1026"
+}
+###
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "email":"ethan0721589@gmail.com",
+    "password": "Ethan@1026"
+}
+###
+
+POST http://localhost:3000/auth/refresh-token
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDcwNTUwOTIsImV4cCI6MTYzODYxMjY5MiwiYXVkIjoiNWZjOTQ1YTBmZDE3MmMzZjZkZTkzZWFhIiwiaXNzIjoiZXRoYW4ifQ.cIIpgwkR9cStNe2pyzywfWwto5r4ZFKPuFVMU3-AuNw"
+}
+
+### 
+DELETE  http://localhost:3000/auth/logout
